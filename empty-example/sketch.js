@@ -11,7 +11,7 @@ function setup()
 
 function draw() 
 {
-  background(250,230,230);
+  background(240,200,250);
 
   
   if(allnotes)
