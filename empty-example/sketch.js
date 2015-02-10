@@ -1,3 +1,6 @@
+// CREATURE 0.1
+
+
 var allnotes;
 var speed;
 
