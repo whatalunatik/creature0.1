@@ -38,9 +38,9 @@ function Note(x, y, speed)
 	
 	this.speed = speed;
 	
-	var freq = (random(500)+200);
+	var freq = (y - height) * 2 * -1;
 
-	println(freq*(2/(speed)));
+	println(freq);
 
 	var voice = new p5.Oscillator(freq, "sawtooth");
 	var env = new p5.Env(0.005, (speed/2), (speed * 4));
