@@ -33,8 +33,13 @@ function Note(x, y, speed)
 	this.y = y;
 	
 	this.speed = speed;
-	
-	
+	var voice = new p5.Oscillator((random(500)+200), "tri");
+	voice.amp(0.1,0);
+	voice.start();
+	println(voice);
+	println(speed);
+
+
 	this.update = function()
 	{
 		move();
@@ -54,11 +59,21 @@ function Note(x, y, speed)
 	{
 		if(x > width)
 		{
+			playSound();
 			x = x - width;
 			
 		}
 
 	};
+
+	var playSound = function()
+	{
+		voice.amp((speed * 0.5), .033);
+		voice.amp(0, (speed * 2));
+		//Println("Success?");
+
+	};
+
 	
 	this.disp = function() 
 	{
